@@ -21,6 +21,84 @@
  */
 export type ButtonVariant = 'primary' | 'secondary' | 'outline';
 
+export interface NavLink {
+  name: string;
+  href: string;
+}
+
+export interface Industry {
+  name: string;
+  description: string;
+  image: string;
+}
+
+export interface Brand {
+  src: string;
+  alt: string;
+}
+
+export type ServiceOption =
+  | 'Web Development'
+  | 'Cloud Solutions'
+  | 'Mobile App Development'
+  | 'Software Development'
+  | 'UI/UX Design'
+  | 'Other';
+
+export interface Stat {
+  value: number;
+  suffix: '+' | '%';
+  label: string;
+}
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export interface Project {
+  image: string;
+  category: string;
+  title: string;
+}
+
+export interface Process {
+  step: number;
+  title: string;
+  description: string;
+}
+
+export interface ProcessCardProps {
+  process: Process;
+  isOpen: boolean;
+  onToggle: () => void;
+}
+
+export interface ServiceCard {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface Testimonial {
+  name: string;
+  position: string;
+  review: string;
+  rating: string;
+  avatar: string;
+}
+
+export interface FooterNavLink {
+  label: string;
+  href: string;
+}
+
+export interface SocialLink {
+  icon: string;
+  alt: string;
+  href: string;
+}
+
 /**
  * Example: Button Props
  * Uncomment dan sesuaikan dengan kebutuhan

@@ -5,11 +5,18 @@
  * Docs: https://tailwindcss.com/docs/installation/using-vite
  */
 
-@import "tailwindcss";
+@import 'tailwindcss';
 
-/* Tell Tailwind where to scan for classes */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @source "./**/*.{js,jsx,ts,tsx}";
 @source "../index.html";
+
+html.dark {
+  background: black;
+}
+
+/* Tell Tailwind where to scan for classes */
 
 /**
  * Custom Global Styles
@@ -42,3 +49,25 @@ html {
   background: #555;
 }
 */
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
